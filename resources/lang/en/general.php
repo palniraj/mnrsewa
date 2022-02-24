@@ -1,0 +1,50 @@
+<?php
+return [
+    // sidebar
+    'home' => 'Home',
+    'contact' => 'Contact',
+    'mnrsewa' => 'mnrSewa',
+    'vendor' => 'Vendor',
+    'dashboard' => 'Dashboard',
+    'user' => 'User',
+    'add-new' => 'Add New',
+    'all-user' => 'All user',
+    'all-vendor' => 'All Vendor',
+    // dashboard
+    'users' => 'users',
+    'pending' => 'Pending',
+    'approved' => 'Approved',
+    'rejected' => 'Rejected',
+    'more-info' => 'More Info',
+    'total' => 'Total',
+    'fullname' => 'Full Name',
+    'email' => 'Email',
+    'all' => 'All',
+    'sn' => 'S.N.',
+    'user-name' => 'User Name',
+    'user-email' => 'User email',
+    'created-at' => 'Created At',
+    'status' => 'Status',
+    'active' => 'Active',
+    'inactive' => 'Inactive',
+    'all-users' => 'All users',
+    'fullname' => 'Full Name',
+    'email' => 'Email',
+    'password' => 'Password',
+    'role' => 'Role',
+ 
+    'submit' => 'Submit',
+    'password-change' => 'Password Change',
+    'approved-date' => 'Approved Date',
+    'rejected-date' => 'Rejected Date',
+    'logout' => 'Logout',
+    'profile' => 'Profile',
+    'con-new-password' => 'New Confirm Password',
+    'new-password' => 'New Password',
+    'current-password' => 'Current Password',
+
+    'date' => 'Date',
+    'approved-admin' => 'Approved By',
+
+    
+];
