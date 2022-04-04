@@ -34,7 +34,7 @@
                     <form method="post" action="{{ route('servicecategory.store') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
-
+                            <input type="hidden" value="{{ Auth::id() }}" name="user_Id">
                             <div class="form-group row">
                                 <label for="name" class="col-sm-4">Name:<span
                                         class="text-danger">*</span></label>
@@ -47,21 +47,22 @@
                                 <select class="form-control col-sm-8" name="parent_id">
                                     <option value="0">None</option>
                                     @foreach ($servicecategories as $servicecategory)
-                                        <option value="{{$servicecategory->id}}">{{$servicecategory->name}}</option>
+                                        <option value="{{ $servicecategory->id }}">{{ $servicecategory->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
 
-                            
+
                             <div class="form-group row">
                                 <label class="col-sm-4">Order:<span class="text-danger">*</span></label>
-                                <input type="number" class="form-control col-sm-8" id="order" name="order" value="0" required>
+                                <input type="number" class="form-control col-sm-8" id="order" name="order" value="0"
+                                    required>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-4">Description:</label>
-                             <textarea name="description" id="description" cols="92" rows="5"></textarea>
+                                <textarea name="description" id="description" cols="92" rows="5"></textarea>
                             </div>
-                            
+
                             <div class="custom-control custom-checkbox">
                                 <input class="custom-control-input" type="checkbox" id="is_featured" name="is_featured">
                                 <label for="is_featured" class="custom-control-label">Is Featured</label>

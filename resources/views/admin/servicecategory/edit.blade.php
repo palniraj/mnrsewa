@@ -36,7 +36,7 @@
                         @method('PUT')
                         
                         <div class="card-body">
-
+                            <input type="hidden" value="{{ Auth::id()}}" name="user_id">
                             <div class="form-group row">
                                 <label for="name" class="col-sm-4">Name:<span
                                         class="text-danger">*</span></label>

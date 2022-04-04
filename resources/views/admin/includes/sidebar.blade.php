@@ -43,31 +43,28 @@
                              Service Category
                          </p>
                      </a>
-
                  </li>
 
                  @if (Auth::user()->role_id == 1)
-                     <li class="nav-item has-treeview {{ Route::is('user.*') ? ' menu-open' : '' }}">
-                         <a href="#" class="nav-link {{ Route::is('user.*') ? ' active' : '' }}">
+                     <li class="nav-item has-treeview menu-open">
+                         <a href="{{route('user.index')}}" class="nav-link {{ Route::is('user.*') ? ' active' : '' }}">
                              <i class="nav-icon fas fa-users"></i>
                              <p>
                                  {{ trans('general.user') }}
-                                 <i class="right fas fa-angle-left"></i>
                              </p>
                          </a>
-                         <ul class="nav nav-treeview">
-                             <li class="nav-item">
-                                 <a href="" class="nav-link ">
-                                     <i class="far fa-circle nav-icon"></i>
-                                     <p> {{ trans('general.all-user') }}</p>
-                                 </a>
-                             </li>
-                         </ul>
                      </li>
                  @endif
 
-                 @if (Auth::user()->role_id == 2)
-
+                 @if (Auth::user()->role_id == 3 && 4)
+                     <li class="nav-item has-treeview menu-open">
+                         <a href="{{route('service.index')}}" class="nav-link {{ Route::is('service.*') ? ' active' : '' }}">
+                             <i class="nav-icon fas fa-product-hunt"></i>
+                             <p>
+                                Service
+                             </p>
+                         </a>
+                     </li>
                  @endif
              </ul>
              </li>

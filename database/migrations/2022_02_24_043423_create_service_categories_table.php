@@ -17,11 +17,12 @@ class CreateServiceCategoriesTable extends Migration
             $table->id();
             $table->string('name');
             $table->integer('parent_id')->nullable();
+            $table->integer('user_id')->nullable();
             $table->mediumText('description')->nullable();
             $table->unsignedInteger('order')->nullable();
             $table->string('image')->nullable();
             $table->string('is_featured')->nullable();
-            // $table->string('status', 60)->default('published');
+            $table->string('status', 60)->default('active');
 
             $table->timestamps();
         });

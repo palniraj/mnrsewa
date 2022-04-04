@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
                     'email' => 'admin@mnrsewa.com',
                     'password' => bcrypt('admin#1234'),
                     'phone' => 9810631146,
-                    'status' => 1,
+                    'status' => 'approved',
                     'role_id' => 1
                 ],
                 [
@@ -33,7 +33,7 @@ class UserSeeder extends Seeder
                     'email' => 'customer@mnrsewa.com',
                     'password' => bcrypt('customer#1234'),
                     'phone' => 9868715191,
-                    'status' => 1,
+                    'status' => 'approved',
                     'role_id' => 2
                 ],
                 [
@@ -42,7 +42,7 @@ class UserSeeder extends Seeder
                     'email' => 'freelancer@mnrsewa.com',
                     'password' => bcrypt('freelancer#1234'),
                     'phone' => 9848755083,
-                    'status' => 1,
+                    'status' => 'approved',
                     'role_id' => 3
                 ],
                 [
@@ -51,7 +51,7 @@ class UserSeeder extends Seeder
                     'email' => 'company@mnrsewa.com',
                     'password' => bcrypt('company#1234'),
                     'phone' => 9868797800,
-                    'status' => 1,
+                    'status' => 'approved',
                     'role_id' => 4
                 ],
             ]);

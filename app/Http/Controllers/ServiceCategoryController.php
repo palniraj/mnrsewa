@@ -44,7 +44,8 @@ class ServiceCategoryController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'parent_id' => 'required',
+            'parent_id' => 'sometimes',
+            'user_id' => 'sometimes',
             'order' => 'required',
             'description' => 'sometimes',
             'is_featured' => 'sometimes',
@@ -91,7 +92,8 @@ class ServiceCategoryController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'parent_id' => 'required',
+            'parent_id' => 'sometimes',
+            'user_id' => 'sometimes',
             'order' => 'required',
             'description' => 'sometimes',
             'is_featured' => 'sometimes',

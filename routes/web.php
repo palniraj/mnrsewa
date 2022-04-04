@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ServiceCategoryController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\UserController;
 use App\Models\ServiceCategory;
 use Illuminate\Support\Facades\Route;
 
@@ -28,5 +30,6 @@ Route::group(['prefix' => 'web-panel', 'middleware' => 'auth'], function () {
     Route::get('dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('webpanel.dashboard');
     Route::get('contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('webpanel.contact');
     Route::resource('servicecategory', ServiceCategoryController::class);
-    
+    Route::resource('user', UserController::class);
+    Route::resource('service', ServiceController::class);
 });
