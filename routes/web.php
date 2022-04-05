@@ -1,10 +1,13 @@
 <?php
 
-use App\Http\Controllers\ServiceCategoryController;
-use App\Http\Controllers\ServiceController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
 use App\Models\ServiceCategory;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ServiceCategoryController;
+use App\Models\Profile;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +35,9 @@ Route::group(['prefix' => 'web-panel', 'middleware' => 'auth'], function () {
     Route::resource('servicecategory', ServiceCategoryController::class);
     Route::resource('user', UserController::class);
     Route::resource('service', ServiceController::class);
+    // Route::resource('profile', ProfileController::class);
+    Route::get('profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile.index');
+    Route::post('profile/store', [App\Http\Controllers\ProfileController::class, 'store'])->name('profile.store');
+    Route::put('profile/{profile}', [App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
+
 });

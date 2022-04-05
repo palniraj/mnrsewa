@@ -31,7 +31,7 @@ $rejectedCount = App\Models\User::where('status', 'rejected')->count();
   <div class="container-fluid">
     <!-- Small boxes (Stat box) -->
     <div class="row">
-@if(Auth::user()->role == 'admin')
+@if(Auth::user()->role_id == 1)
     <div class="col-lg-3 col-6">
         <!-- small box -->
         <div class="small-box bg-warning">
@@ -94,7 +94,7 @@ $rejectedCount = App\Models\User::where('status', 'rejected')->count();
         </div>
       </div>
 
-      @else
+  
       <div class="col-lg-3 col-6">
         <!-- small box -->
         <div class="small-box bg-warning">
