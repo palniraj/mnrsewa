@@ -1,13 +1,14 @@
 <?php
 
+use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
-use App\Models\ServiceCategory;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ServiceCategoryController;
-use App\Models\Profile;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,22 +23,25 @@ use App\Models\Profile;
 
 
 
-Route::get('/', [App\Http\Controllers\FrontendController::class, 'index'])->name('mnrsewa.index');
-Route::get('/company-register', [App\Http\Controllers\FrontendController::class, 'compregister'])->name('company.register');
-Route::get('/freelancer-register', [App\Http\Controllers\FrontendController::class, 'freelregister'])->name('freelancer.register');
-Route::get('/customer-register', [App\Http\Controllers\FrontendController::class, 'custregister'])->name('customer.register');
+Route::get('/', [FrontendController::class, 'index'])->name('mnrsewa.index');
+Route::get('/company-register', [FrontendController::class, 'compregister'])->name('company.register');
+Route::get('/freelancer-register', [FrontendController::class, 'freelregister'])->name('freelancer.register');
+Route::get('/customer-register', [FrontendController::class, 'custregister'])->name('customer.register');
+
+Route::get('/home', [FrontendController::class, 'home'])->name('frontend.home');
+
 
 
 Auth::routes(['register' => true]);
 Route::group(['prefix' => 'web-panel', 'middleware' => 'auth'], function () {
-    Route::get('dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('webpanel.dashboard');
-    Route::get('contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('webpanel.contact');
+    Route::get('dashboard', [HomeController::class, 'dashboard'])->name('webpanel.dashboard');
+    Route::get('contact', [HomeController::class, 'contact'])->name('webpanel.contact');
     Route::resource('servicecategory', ServiceCategoryController::class);
     Route::resource('user', UserController::class);
     Route::resource('service', ServiceController::class);
     // Route::resource('profile', ProfileController::class);
-    Route::get('profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile.index');
-    Route::post('profile/store', [App\Http\Controllers\ProfileController::class, 'store'])->name('profile.store');
-    Route::put('profile/{profile}', [App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
+    Route::get('profile', [ProfileController::class, 'index'])->name('profile.index');
+    Route::post('profile/store', [ProfileController::class, 'store'])->name('profile.store');
+    Route::put('profile/{profile}', [ProfileController::class, 'update'])->name('profile.update');
 
 });

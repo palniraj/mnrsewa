@@ -23,7 +23,7 @@ class FrontendController extends Controller
         return view('auth.custregister');
     }
     public function home(){
-        return view('');
+        return view('frontend.pages.home');
     }
   
 }
