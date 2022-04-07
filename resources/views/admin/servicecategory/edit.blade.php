@@ -53,8 +53,8 @@
 
                             
                             <div class="form-group row">
-                                <label class="col-sm-4">Order:<span class="text-danger">*</span></label>
-                                <input type="number" class="form-control col-sm-8" id="order" name="order" value="{{$servicecategory->order}}" required>
+                                <label class="col-sm-4">Order:</label>
+                                <input type="number" class="form-control col-sm-8" id="order" name="order" value="{{$servicecategory->order}}">
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-4">Description:</label>

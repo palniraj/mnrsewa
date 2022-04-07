@@ -20,8 +20,8 @@ class CreateServicesTable extends Migration
             $table->unsignedBigInteger('servicecategory_id')->nullable();
             $table->string('price_badge');
             $table->string('price');
-            $table->string('description');
-            $table->string('highlights')->nullable();
+            $table->longText('description');
+            $table->longText('highlights')->nullable();
             $table->string('image');
             $table->string('tags')->nullable();
             $table->string('gallery')->nullable();

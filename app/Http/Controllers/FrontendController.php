@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Service;
+use App\Models\ServiceCategory;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -23,7 +25,13 @@ class FrontendController extends Controller
         return view('auth.custregister');
     }
     public function home(){
-        return view('frontend.pages.home');
+        $servicecategories = ServiceCategory::where('is_featured', 'on')->where('status', 'active')->pluck('name');
+        // dd($servicecategories);
+        $services = Service::all();
+        return view('frontend.pages.home')->with([
+        'servicecategories' => $servicecategories,
+        'services' => $services,
+        ]);
     }
   
 }

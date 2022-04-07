@@ -2,13 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Big store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template| Home :: w3layouts</title>
+<title>mnrSewa - Make your work easy by all in one online service platform</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="og:title" content="Vide" />
-<meta name="keywords" content="Big store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<meta name="keywords" content="mnrSewa, Make your work easy by all in one online service platform, all in one service," />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
@@ -61,30 +60,35 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 </head>
 <body>
-<a href="offer.html"><img src="images/download.png" class="img-head" alt=""></a>
 <div class="header">
 
 		<div class="container">
 			
 			<div class="logo">
-				<h1 ><a href="index.html"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h1>
+				<img src="{{asset('/images/mnrSewa_dlogo.png')}}" alt="" height="150">
+				{{-- <h1 ><a href="{{route('frontend.home')}}"><b>M<br>N<br>R</b>Sewa<span>All in one Service platform</span></a></h1> --}}
 			</div>
 			<div class="head-t">
 				<ul class="card">
 					<li><a href="wishlist.html" ><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
-					<li><a href="login.html" ><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
-					<li><a href="register.html" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Register</a></li>
-					<li><a href="about.html" ><i class="fa fa-file-text-o" aria-hidden="true"></i>Order History</a></li>
-					<li><a href="shipping.html" ><i class="fa fa-ship" aria-hidden="true"></i>Shipping</a></li>
+					<li><a href="{{ route('login') }}" ><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
+					<li><a href="{{ route('company.register') }}" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Join as Company</a></li>
+					<li><a href="{{ route('freelancer.register') }}" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Join as Freelancer</a></li>
+					<li><a href="{{ route('customer.register') }}" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Register as Customer</a></li>
+					<li><a href="tel:+977-9810631146" ><i class="fa fa-phone" aria-hidden="true"></i>9810631146</a></li>
+					<li><a href="tel:+977-9868715191" ><i class="fa fa-phone" aria-hidden="true"></i>9868715191</a></li>
+					<li><a href="mailto:palniraj21@gmail.com" ><i class="fa fa-envelope-o" aria-hidden="true"></i>palniraj21@gmail.com</a></li>
 				</ul>	
 			</div>
 			
 			<div class="header-ri">
 				<ul class="social-top">
-					<li><a href="#" class="icon facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a></li>
-					<li><a href="#" class="icon twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a></li>
-					<li><a href="#" class="icon pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i><span></span></a></li>
-					<li><a href="#" class="icon dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i><span></span></a></li>
+					<li><a href="https://www.facebook.com/nirajpal.com.np/" class="icon facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a></li>
+					<li><a href="https://www.twitter.com/palniraj21" class="icon twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a></li>
+					<li><a href="https://www.youtube.com/c/nirajpal/" class="icon youtube" ><i class="fa fa-youtube" style="color: red" aria-hidden="true"></i><span></span></a></li>
+					<li><a href="https://www.linkedin.com/in/niraj-pal/" class="icon linkedin"><i class="fa fa-linkedin" style="color: blue" aria-hidden="true"></i><span></span></a></li>
+					<li><a href="https://www.github.com/palniraj21" class="icon github" ><i class="fa fa-github" aria-hidden="true"></i><span></span></a></li>
+				
 				</ul>	
 			</div>
 		
@@ -104,10 +108,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					</div> 
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav ">
-							<li class=" active"><a href="index.html" class="hyper "><span>Home</span></a></li>	
+							<li class=" active"><a href="{{route('frontend.home')}}" class="hyper "><span>Home</span></a></li>	
 							
 							<li class="dropdown ">
-								<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><span>Kitchen<b class="caret"></b></span></a>
+				
+								<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><span>{{$servicecategories[0]}}<b class="caret"></b></span></a>
+							
 								<ul class="dropdown-menu multi">
 									<div class="row">
 										<div class="col-sm-3">
@@ -152,7 +158,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							</li>
 							<li class="dropdown">
 							
-								<a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span> Personal Care <b class="caret"></b></span></a>
+								<a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span> {{$servicecategories[1]}} <b class="caret"></b></span></a>
 								<ul class="dropdown-menu multi multi1">
 									<div class="row">
 										<div class="col-sm-3">
@@ -194,7 +200,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								</ul>
 							</li>
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span>Household<b class="caret"></b></span></a>
+								<a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span>{{$servicecategories[2]}}<b class="caret"></b></span></a>
 								<ul class="dropdown-menu multi multi2">
 									<div class="row">
 										<div class="col-sm-3">
@@ -236,8 +242,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								</ul>
 							</li>
 							
-							<li><a href="codes.html" class="hyper"> <span>Codes</span></a></li>
-							<li><a href="contact.html" class="hyper"><span>Contact Us</span></a></li>
+							<li><a href="codes.html" class="hyper"> <span>{{$servicecategories[3]}}</span></a></li>
+							<li><a href="contact.html" class="hyper"><span>{{$servicecategories[4]}}</span></a></li>
+							<li><a href="contact.html" class="hyper"><span>{{$servicecategories[5]}}</span></a></li>
+							<li><a href="contact.html" class="hyper"><span>{{$servicecategories[6]}}</span></a></li>
+							<li><a href="contact.html" class="hyper"><span>{{$servicecategories[7]}}</span></a></li>
+
 						</ul>
 					</div>
 					</nav>
@@ -254,8 +264,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <div data-vide-bg="video/video">
     <div class="container">
 		<div class="banner-info">
-			<h3>It is a long established fact that a reader will be distracted by 
-			the readable </h3>	
+			<h3>Make your work easy by all in one online service platform </h3>	
 			<div class="search-form">
 				<form action="#" method="post">
 					<input type="text" placeholder="Search..." name="Search...">
@@ -777,183 +786,37 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 			</div>
 				<div class=" con-w3l">
-							<div class="col-md-3 pro-1">
+					@foreach ($services as $service)
+						
+					
+							<div class="col-md-4 pro-1">
 								<div class="col-m">
 								<a href="#" data-toggle="modal" data-target="#myModal17" class="offer-img">
-										<img src="images/of16.png" class="img-responsive" alt="">
+										<img src="{{asset('uploads/service/'.$service->image)}}" class="img-responsive" alt="">
 									</a>
+									<div class="offer"><p><span>{{$service->price_badge}}</span></p></div>
+
 									<div class="mid-1">
 										<div class="women">
-											<h6><a href="single.html">Moisturiser</a>(500 g)</h6>							
+											<h6><a href="single.html">{{$service->name}}</a> </h6>							
 										</div>
 										<div class="mid-2">
-											<p ><label>$7.00</label><em class="item_price">$6.00</em></p>
+											<p ><em class="item_price">Rs. {{$service->price}}</em></p>
 											  <div class="block">
 												<div class="starbox small ghosting"> </div>
 											</div>
 											<div class="clearfix"></div>
 										</div>
 											<div class="add add-2">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="6.00" data-quantity="1" data-image="images/of16.png">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="{{$service->price}}" data-quantity="1" data-image="images/of16.png">Book Now</button>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3 pro-1">
-								<div class="col-m">
-									<a href="#" data-toggle="modal" data-target="#myModal18" class="offer-img">
-										<img src="images/of17.png" class="img-responsive" alt="">
-									</a>
-									<div class="mid-1">
-										<div class="women">
-											<h6><a href="single.html">  Lady Finger</a>(250 g)</h6>							
-										</div>
-										<div class="mid-2">
-											<p ><label>$5.00</label><em class="item_price">$4.50</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="4.50" data-quantity="1" data-image="images/of17.png">Add to Cart</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 pro-1">
-								<div class="col-m">
-									<a href="#" data-toggle="modal" data-target="#myModal19" class="offer-img">
-										<img src="images/of18.png" class="img-responsive" alt="">
-									</a>
-									<div class="mid-1">
-										<div class="women">
-											<h6><a href="single.html"> Ribbon</a>(1 pc)</h6>							
-										</div>
-										<div class="mid-2">
-											<p ><label>$4.00</label><em class="item_price">$3.50</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="3.50" data-quantity="1" data-image="images/of18.png">Add to Cart</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 pro-1">
-								<div class="col-m">
-									<a href="#" data-toggle="modal" data-target="#myModal20" class="offer-img">
-										<img src="images/of19.png" class="img-responsive" alt="">
-									</a>
-									<div class="mid-1">
-										<div class="women">
-											<h6><a href="single.html">Grapes</a>(500 g)</h6>							
-										</div>
-										<div class="mid-2">
-											<p ><label>$1.00</label><em class="item_price">$0.80</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="0.80" data-quantity="1" data-image="images/of19.png">Add to Cart</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="col-md-3 pro-1">
-								<div class="col-m">
-								<a href="#" data-toggle="modal" data-target="#myModal21" class="offer-img">
-										<img src="images/of20.png" class="img-responsive" alt="">
-									</a>
-									<div class="mid-1">
-										<div class="women">
-											<h6><a href="single.html">Clips</a>(1 pack)</h6>							
-										</div>
-										<div class="mid-2">
-											<p ><label>$7.00</label><em class="item_price">$6.00</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="6.00" data-quantity="1" data-image="images/of20.png">Add to Cart</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 pro-1">
-								<div class="col-m">
-									<a href="#" data-toggle="modal" data-target="#myModal22" class="offer-img">
-										<img src="images/of21.png" class="img-responsive" alt="">
-									</a>
-									<div class="mid-1">
-										<div class="women">
-											<h6><a href="single.html">Conditioner</a>(250 g)</h6>							
-										</div>
-										<div class="mid-2">
-											<p ><label>$5.00</label><em class="item_price">$4.50</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="4.50" data-quantity="1" data-image="images/of21.png">Add to Cart</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 pro-1">
-								<div class="col-m">
-									<a href="#" data-toggle="modal" data-target="#myModal23" class="offer-img">
-										<img src="images/of22.png" class="img-responsive" alt="">
-									</a>
-									<div class="mid-1">
-										<div class="women">
-											<h6><a href="single.html">Cleaner</a>(250 kg)</h6>							
-										</div>
-										<div class="mid-2">
-											<p ><label>$4.00</label><em class="item_price">$3.50</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="3.50" data-quantity="1" data-image="images/of22.png">Add to Cart</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 pro-1">
-								<div class="col-m">
-									<a href="#" data-toggle="modal" data-target="#myModal24" class="offer-img">
-										<img src="images/of23.png" class="img-responsive" alt="">
-									</a>
-									<div class="mid-1">
-										<div class="women">
-											<h6><a href="single.html">Gel</a>(150 g)</h6>							
-										</div>
-										<div class="mid-2">
-											<p ><label>$1.00</label><em class="item_price">$0.80</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1" data-summary="summary 1" data-price="0.80" data-quantity="1" data-image="images/of23.png">Add to Cart</button>
-										</div>
-									</div>
-								</div>
-							</div>
+							@endforeach
+				
+					
+						
 							<div class="clearfix"></div>
 						 </div>
 		</div>
@@ -1000,30 +863,31 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</div>
 		<div class="clearfix"></div>
 			<div class="footer-bottom">
-				<h2 ><a href="index.html"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h2>
-				<p class="fo-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+				<h2 ><a href="index.html"><b>M<br>N<br>R</b>Sewa<span>All in One Service Platform</span></a></h2>
+				<p class="fo-para">Make your work easy by all in one online service platform</p>
 				<ul class="social-fo">
-					<li><a href="#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					<li><a href="#" class=" twi"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					<li><a href="#" class=" pin"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-					<li><a href="#" class=" dri"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-				</ul>
+					<li><a href="https://www.facebook.com/nirajpal.com.np/" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.youtube.com/c/nirajpal/" class=" pin"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.twitter.com/palniraj21" class=" twi"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.github.com/palniraj21" class="" style="background: black"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/niraj-pal/" class=" twi"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						</ul>
 				<div class=" address">
 					<div class="col-md-4 fo-grid1">
-							<p><i class="fa fa-home" aria-hidden="true"></i>12K Street , 45 Building Road Canada.</p>
+							<p><i class="fa fa-home" aria-hidden="true"></i>Mahendrangar, Kanchanpur Nepal</p>
 					</div>
 					<div class="col-md-4 fo-grid1">
-							<p><i class="fa fa-phone" aria-hidden="true"></i>+1234 758 839 , +1273 748 730</p>	
+							<p><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+977-9810631146" >+977-9810631146</a>, <a href="tel:+977-9868715191" >+977 9868715191</a></p>	
 					</div>
 					<div class="col-md-4 fo-grid1">
-						<p><a href="mailto:info@example.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>info@example1.com</a></p>
+						<p><a href="mailto:contact@nirajpal.com.np"><i class="fa fa-envelope-o" aria-hidden="true"></i>contact@nirajpal.com.np</a></p>
 					</div>
 					<div class="clearfix"></div>
 					
 					</div>
 			</div>
 		<div class="copy-right">
-			<p> &copy; 2016 Big store. All Rights Reserved | Design by  <a href="http://w3layouts.com/"> W3layouts</a></p>
+			<p> &copy; {{now()->year}} mnrSewa. All Rights Reserved | Developed by  <a href="http://nirajpal.com.np/"> NPLgroup | A Final Year Project TU SNSC CSIT 2074 Batch</a></p>
 		</div>
 	</div>
 </div>

@@ -54,9 +54,9 @@
 
 
                             <div class="form-group row">
-                                <label class="col-sm-4">Order:<span class="text-danger">*</span></label>
+                                <label class="col-sm-4">Order:</label>
                                 <input type="number" class="form-control col-sm-8" id="order" name="order" value="0"
-                                    required>
+                                    >
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-4">Description:</label>

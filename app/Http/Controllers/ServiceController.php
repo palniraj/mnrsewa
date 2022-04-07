@@ -18,6 +18,7 @@ class ServiceController extends Controller
     public function index()
     {
         $services = Service::where('user_id', Auth::id())->get();
+
         return view('vendor.service.index')->with([
             'services' => $services,
         ]);

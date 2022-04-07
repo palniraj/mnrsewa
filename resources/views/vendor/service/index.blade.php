@@ -45,6 +45,9 @@
                                     Category
                                 </th>
                                 <th>
+                                    Badge
+                                </th>
+                                <th>
                                    Price
                                 </th>
                                 <th>
@@ -80,6 +83,9 @@
                                         <ul class="list-inline">
                                             <p>  {{$service->servicecategory->name}} </p>
                                         </ul>
+                                    </td>
+                                    <td>
+                                         <span class="badge badge-danger">{{$service->price_badge}}</span>
                                     </td>
                                     <td>
                                         Rs. <span class="badge badge-success">{{$service->price}}</span>

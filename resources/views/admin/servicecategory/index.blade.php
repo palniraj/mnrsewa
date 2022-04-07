@@ -35,10 +35,8 @@
                                     <th>
                                         S.N
                                     </th>
+                                   
                                     <th>
-                                        Image
-                                    </th>
-                                    <th class="text-center">
                                         Name
                                     </th>
                                     <th>
@@ -62,11 +60,6 @@
                                 <tr>
                                     <td>
                                         {{$key+1}}
-                                    </td>
-                                    <td>
-                                        <ul class="list-inline">
-                                            <p>{{$servicecategory->image}}</p>
-                                        </ul>
                                     </td>
                                     <td>
                                         <ul class="list-inline">

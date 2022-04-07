@@ -142,18 +142,18 @@ if (isset($profile)) {
                                         class="text-danger">*</span></label>
                                 <div class="form-check form-check-inline" style="color:#232323; font-size: 15x;">
                                     <input class="form-check-input " type="radio" name="gender" id="male" value="male"
-                                        required @if ($profile->gender == 'male') checked @endif>
+                                        required @if($profile && $profile->gender == 'male') checked @endif>
                                     <label class="form-check-label" style="font-weight: 400;" for="male">Male</label>
                                 </div>
                                 <div class="form-check form-check-inline" style="color:#232323; font-size: 15x;">
                                     <input class="form-check-input" type="radio" name="gender" id="female"
-                                        value="female" @if ($profile->gender == 'female') checked @endif>
+                                        value="female" @if ($profile && $profile->gender == 'female') checked @endif>
                                     <label class="form-check-label" style="font-weight: 400;"
                                         for="female">Female</label>
                                 </div>
                                 <div class="form-check form-check-inline" style="color:#232323; font-size: 15x;">
                                     <input class="form-check-input" type="radio" name="gender" id="other" value="other"
-                                        @if ($profile->gender == 'other') checked @endif>
+                                        @if ($profile && $profile->gender == 'other') checked @endif>
                                     <label class="form-check-label" style="font-weight: 400;" for="other">Other</label>
                                 </div>
                             </div>

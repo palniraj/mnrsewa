@@ -29,7 +29,7 @@ class UserSeeder extends Seeder
                 ],
                 [
                     'id' => 2,
-                    'name' => 'mnrsewa customer',
+                    'name' => 'Kishor Bhatt',
                     'email' => 'customer@mnrsewa.com',
                     'password' => bcrypt('customer#1234'),
                     'phone' => 9868715191,
@@ -38,8 +38,8 @@ class UserSeeder extends Seeder
                 ],
                 [
                     'id' => 3,
-                    'name' => 'mnrsewa freelancer',
-                    'email' => 'freelancer@mnrsewa.com',
+                    'name' => 'Niraj Pal',
+                    'email' => 'contact@niraj.com.np',
                     'password' => bcrypt('freelancer#1234'),
                     'phone' => 9848755083,
                     'status' => 'approved',
@@ -47,13 +47,41 @@ class UserSeeder extends Seeder
                 ],
                 [
                     'id' => 4,
-                    'name' => 'mnrsewa company',
-                    'email' => 'company@mnrsewa.com',
+                    'name' => 'Sofsee Tech',
+                    'email' => 'info@sofsee.com',
                     'password' => bcrypt('company#1234'),
                     'phone' => 9868797800,
                     'status' => 'approved',
                     'role_id' => 4
                 ],
+                [
+                    'id' => 5,
+                    'name' => 'Sarswati Bam',
+                    'email' => 'freelancer1@mnrsewa.com',
+                    'password' => bcrypt('freelancer#1234'),
+                    'phone' => 9848132447,
+                    'status' => 'approved',
+                    'role_id' => 3
+                ],
+                [
+                    'id' => 6,
+                    'name' => 'Deependra Pal',
+                    'email' => 'freelancer2@mnrsewa.com',
+                    'password' => bcrypt('freelancer#1234'),
+                    'phone' => 98487164946,
+                    'status' => 'approved',
+                    'role_id' => 3
+                ],
+                [
+                    'id' => 7,
+                    'name' => 'Bikram Basnet',
+                    'email' => 'freelancer3@mnrsewa.com',
+                    'password' => bcrypt('freelancer#1234'),
+                    'phone' => 9848759464,
+                    'status' => 'approved',
+                    'role_id' => 3
+                ],
+
             ]);
         } else {
             echo "\e[31mTable is not empty, therefore NOT ";
