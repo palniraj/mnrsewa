@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InterestfieldController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
@@ -43,7 +44,7 @@ Route::get('thank-you', [OrderController::class, 'thankyou'])->name('thankyou');
 Route::resource('orders', OrderController::class)->middleware('auth');
 
 // Route::view('frontend.pages.order-completed', 'order-completed');
-
+Route::get('/service/search', [ServiceController::class, 'search'])->name('service.search');
 Auth::routes(['register' => true]);
 Route::group(['prefix' => 'web-panel', 'middleware' => 'auth'], function () {
     Route::get('dashboard', [HomeController::class, 'dashboard'])->name('webpanel.dashboard');
@@ -51,9 +52,14 @@ Route::group(['prefix' => 'web-panel', 'middleware' => 'auth'], function () {
     Route::resource('servicecategory', ServiceCategoryController::class);
     Route::resource('user', UserController::class);
     Route::resource('service', ServiceController::class);
+    Route::resource('', InterestfieldController::class);
     // Route::resource('profile', ProfileController::class);
     Route::get('profile', [ProfileController::class, 'index'])->name('profile.index');
     Route::post('profile/store', [ProfileController::class, 'store'])->name('profile.store');
     Route::put('profile/{profile}', [ProfileController::class, 'update'])->name('profile.update');
+
+    Route::get('interestfield', [InterestfieldController::class, 'index'])->name('interestfield.index');
+    Route::post('interestfield/store', [InterestfieldController::class, 'store'])->name('interestfield.store');
+    Route::put('interestfield/{interestfield}', [InterestfieldController::class, 'update'])->name('interestfield.update');
 
 });

@@ -106,7 +106,19 @@
                             </p>
                         </a>
                     </li>
+                 @endif 
+                 
+                 @if (Auth::user()->role_id == 2)
+                 <li class="nav-item has-treeview menu-open">
+                    <a href="{{route('interestfield.index')}}" class="nav-link {{ Route::is('interestfield.*') ? ' active' : '' }}">
+                        <i class="nav-icon fas "></i>
+                        <p>
+                            Interest
+                        </p>
+                    </a>
+                </li>
                  @endif
+
              </ul>
              </li>
              </ul>

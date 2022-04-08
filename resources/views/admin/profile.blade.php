@@ -142,7 +142,7 @@ if (isset($profile)) {
                                         class="text-danger">*</span></label>
                                 <div class="form-check form-check-inline" style="color:#232323; font-size: 15x;">
                                     <input class="form-check-input " type="radio" name="gender" id="male" value="male"
-                                        required @if($profile && $profile->gender == 'male') checked @endif>
+                                        required @if ($profile && $profile->gender == 'male') checked @endif>
                                     <label class="form-check-label" style="font-weight: 400;" for="male">Male</label>
                                 </div>
                                 <div class="form-check form-check-inline" style="color:#232323; font-size: 15x;">

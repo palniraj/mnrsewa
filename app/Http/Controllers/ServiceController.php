@@ -61,6 +61,16 @@ class ServiceController extends Controller
         return redirect(route('service.index'))->with('success', 'Service Added Successfully');
     }
 
+    public function search(Request $request)
+    {
+
+        $query = $request->input('query');
+
+        $services = Service::where('name','LIKE',"%$query%")->paginate(10);
+
+        return view('vendor.service.catalog',compact('services'));
+    }
+
     /**
      * Display the specified resource.
      *

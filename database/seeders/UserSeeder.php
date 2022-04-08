@@ -38,9 +38,9 @@ class UserSeeder extends Seeder
                 ],
                 [
                     'id' => 3,
-                    'name' => 'Niraj Pal',
-                    'email' => 'contact@niraj.com.np',
-                    'password' => bcrypt('freelancer#1234'),
+                    'name' => 'Lalit Nath',
+                    'email' => 'lalitnath1999@gmail.com',
+                    'password' => bcrypt('Nepal@123'),
                     'phone' => 9848755083,
                     'status' => 'approved',
                     'role_id' => 3
@@ -74,8 +74,8 @@ class UserSeeder extends Seeder
                 ],
                 [
                     'id' => 7,
-                    'name' => 'Lalit Nath',
-                    'email' => 'freelancer3@mnrsewa.com',
+                    'name' => 'Niraj Pal',
+                    'email' => 'contact@nirajpal.com.np',
                     'password' => bcrypt('freelancer#1234'),
                     'phone' => 9848759464,
                     'status' => 'approved',

@@ -10,7 +10,7 @@
      <!-- for-mobile-apps -->
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-     <meta property="og:title" content="Vide" />
+     <meta property="og:title" content="Video" />
      <meta name="keywords"
          content="mnrSewa, Make your work easy by all in one online service platform, all in one service," />
      <script type="application/x-javascript">
@@ -84,7 +84,7 @@
          <div class="container">
 
              <div class="logo">
-                 <img src="{{ asset('/images/mnrSewa_dlogo.png') }}" alt="" height="150">
+                <a href="{{route('frontend.home')}}">   <img src="{{ asset('/images/mnrSewa_dlogo.png') }}" alt="" height="150"></a>
                  {{-- <h1 ><a href="{{route('frontend.home')}}"><b>M<br>N<br>R</b>Sewa<span>All in one Service platform</span></a></h1> --}}
              </div>
              <div class="head-t">
@@ -150,54 +150,23 @@
 
                              <ul class="dropdown-menu multi">
                                  <div class="row">
-                                     <div class="col-sm-3">
+                                     <div class="col-sm-6">
                                          <ul class="multi-column-dropdown">
-
-                                             <li><a href="kitchen.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Water & Beverages</a></li>
-                                             <li><a href="kitchen.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Fruits & Vegetables</a></li>
-                                             <li><a href="kitchen.html"> <i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Staples</a></li>
-                                             <li><a href="kitchen.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Branded Food</a></li>
+                                           
+                                             <li><a href="#"><i class="fa fa-angle-right"
+                                                         aria-hidden="true"></i>Electrician</a></li>
+                                             <li><a href="#"><i class="fa fa-angle-right"
+                                                         aria-hidden="true"></i>Cleaning</a></li>
+                                             <li><a href="#"> <i class="fa fa-angle-right"
+                                                         aria-hidden="true"></i>Plumber</a></li>
+                                             <li><a href="#"><i class="fa fa-angle-right"
+                                                         aria-hidden="true"></i>Carpenter</a></li>
 
                                          </ul>
 
                                      </div>
-                                     <div class="col-sm-3">
-
-                                         <ul class="multi-column-dropdown">
-                                             <li><a href="kitchen.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Breakfast &amp; Cereal</a></li>
-                                             <li><a href="kitchen.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Snacks</a></li>
-                                             <li><a href="kitchen.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Spices</a></li>
-                                             <li><a href="kitchen.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Biscuit &amp; Cookie</a></li>
-                                             <li><a href="kitchen.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Sweets</a></li>
-
-                                         </ul>
-
-                                     </div>
-                                     <div class="col-sm-3">
-
-                                         <ul class="multi-column-dropdown">
-                                             <li><a href="kitchen.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Pickle & Condiment</a></li>
-                                             <li><a href="kitchen.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Instant Food</a></li>
-                                             <li><a href="kitchen.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Dry Fruit</a></li>
-                                             <li><a href="kitchen.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Tea &amp; Coffee</a></li>
-
-                                         </ul>
-                                     </div>
-                                     <div class="col-sm-3 w3l">
-                                         <a href="kitchen.html"><img src="images/me.png" class="img-responsive"
+                                     <div class="col-sm-6 w3l">
+                                         <a href="#"><img src="images/me.png" class="img-responsive"
                                                  alt=""></a>
                                      </div>
                                      <div class="clearfix"></div>
@@ -210,50 +179,26 @@
                                      {{ $servicecategories[1] }} <b class="caret"></b></span></a>
                              <ul class="dropdown-menu multi multi1">
                                  <div class="row">
-                                     <div class="col-sm-3">
+                                     <div class="col-sm-6">
                                          <ul class="multi-column-dropdown">
-                                             <li><a href="care.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i> Ayurvedic </a></li>
-                                             <li><a href="care.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Baby Care</a></li>
-                                             <li><a href="care.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Cosmetics</a></li>
-                                             <li><a href="care.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Deo & Purfumes</a></li>
+                                             <li><a href="#"><i class="fa fa-angle-right"
+                                                         aria-hidden="true"></i> Therapist </a></li>
+                                             <li><a href="#"><i class="fa fa-angle-right"
+                                                         aria-hidden="true"></i>Covid-19</a></li>
+                                             <li><a href="#"><i class="fa fa-angle-right"
+                                                         aria-hidden="true"></i>Nurse</a></li>
+                                             <li><a href="#"><i class="fa fa-angle-right"
+                                                         aria-hidden="true"></i>Ambulance</a></li>
+                                             <li><a href="#"><i class="fa fa-angle-right"
+                                                         aria-hidden="true"></i>Old Age Care</a></li>
+                                             <li><a href="#"><i class="fa fa-angle-right"
+                                                         aria-hidden="true"></i>Doctor</a></li>
 
                                          </ul>
 
                                      </div>
-                                     <div class="col-sm-3">
-
-                                         <ul class="multi-column-dropdown">
-                                             <li><a href="care.html"> <i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Hair Care </a></li>
-                                             <li><a href="care.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Oral Care</a></li>
-                                             <li><a href="care.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Personal Hygiene</a></li>
-                                             <li><a href="care.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Skin care</a></li>
-
-                                         </ul>
-
-                                     </div>
-                                     <div class="col-sm-3">
-
-                                         <ul class="multi-column-dropdown">
-                                             <li><a href="care.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i> Fashion Accessories </a></li>
-                                             <li><a href="care.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Grooming Tools</a></li>
-                                             <li><a href="care.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Shaving Need</a></li>
-                                             <li><a href="care.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Sanitary Needs</a></li>
-
-                                         </ul>
-                                     </div>
-                                     <div class="col-sm-3 w3l">
+                                    
+                                     <div class="col-sm-6 w3l">
                                          <a href="care.html"><img src="images/me1.png" class="img-responsive"
                                                  alt=""></a>
                                      </div>
@@ -267,50 +212,22 @@
                                          class="caret"></b></span></a>
                              <ul class="dropdown-menu multi multi2">
                                  <div class="row">
-                                     <div class="col-sm-3">
-                                         <ul class="multi-column-dropdown">
-                                             <li><a href="hold.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Cleaning Accessories</a></li>
-                                             <li><a href="hold.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>CookWear</a></li>
-                                             <li><a href="hold.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Detergents</a></li>
-                                             <li><a href="hold.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Gardening Needs</a></li>
+                                    <div class="col-sm-6">
 
-                                         </ul>
+                                        <ul class="multi-column-dropdown">
+                                            <li><a href="#"> <i class="fa fa-angle-right"
+                                                        aria-hidden="true"></i>Website Development </a></li>
+                                            <li><a href="#"><i class="fa fa-angle-right"
+                                                        aria-hidden="true"></i>Web Hosting</a></li>
+                                            <li><a href="#"><i class="fa fa-angle-right"
+                                                        aria-hidden="true"></i>Digital Marketing</a></li>
+                                            <li><a href="#"><i class="fa fa-angle-right"
+                                                        aria-hidden="true"></i>App Developer</a></li>
 
-                                     </div>
-                                     <div class="col-sm-3">
+                                        </ul>
 
-                                         <ul class="multi-column-dropdown">
-                                             <li><a href="hold.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Kitchen & Dining</a></li>
-                                             <li><a href="hold.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>KitchenWear</a></li>
-                                             <li><a href="hold.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Pet Care</a></li>
-                                             <li><a href="hold.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Plastic Wear</a></li>
-
-                                         </ul>
-
-                                     </div>
-                                     <div class="col-sm-3">
-
-                                         <ul class="multi-column-dropdown">
-                                             <li><a href="hold.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Pooja Needs</a></li>
-                                             <li><a href="hold.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Serveware</a></li>
-                                             <li><a href="hold.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Safety Accessories</a></li>
-                                             <li><a href="hold.html"><i class="fa fa-angle-right"
-                                                         aria-hidden="true"></i>Festive Decoratives </a></li>
-
-                                         </ul>
-                                     </div>
-                                     <div class="col-sm-3 w3l">
+                                    </div>
+                                     <div class="col-sm-6 w3l">
                                          <a href="hold.html"><img src="images/me2.png" class="img-responsive"
                                                  alt=""></a>
                                      </div>
@@ -319,15 +236,15 @@
                              </ul>
                          </li>
 
-                         <li><a href="codes.html" class="hyper"> <span>{{ $servicecategories[3] }}</span></a>
+                         <li><a href="#" class="hyper"> <span>{{ $servicecategories[3] }}</span></a>
                          </li>
-                         <li><a href="contact.html"
+                         <li><a href="#"
                                  class="hyper"><span>{{ $servicecategories[4] }}</span></a></li>
-                         <li><a href="contact.html"
+                         <li><a href="#"
                                  class="hyper"><span>{{ $servicecategories[5] }}</span></a></li>
-                         <li><a href="contact.html"
+                         <li><a href="#"
                                  class="hyper"><span>{{ $servicecategories[6] }}</span></a></li>
-                         <li><a href="contact.html"
+                         <li><a href="#"
                                  class="hyper"><span>{{ $servicecategories[7] }}</span></a></li>
 
 								 <li class="dropdown ">
@@ -341,27 +258,27 @@
 											<div class="col-sm-3">
 												<ul class="multi-column-dropdown">
 	   
-													<li><a href="kitchen.html"><i class="fa fa-angle-right"
+													<li><a href="#"><i class="fa fa-angle-right"
 																aria-hidden="true"></i>Water & Beverages</a></li>
-													<li><a href="kitchen.html"><i class="fa fa-angle-right"
+													<li><a href="#"><i class="fa fa-angle-right"
 																aria-hidden="true"></i>Fruits & Vegetables</a></li>
-													<li><a href="kitchen.html"> <i class="fa fa-angle-right"
+													<li><a href="#"> <i class="fa fa-angle-right"
 																aria-hidden="true"></i>Staples</a></li>
-													<li><a href="kitchen.html"><i class="fa fa-angle-right"
+													<li><a href="#"><i class="fa fa-angle-right"
 																aria-hidden="true"></i>Branded Food</a></li>
-													<li><a href="kitchen.html"><i class="fa fa-angle-right"
+													<li><a href="#"><i class="fa fa-angle-right"
 																aria-hidden="true"></i>Pickle & Condiment</a></li>
-													<li><a href="kitchen.html"><i class="fa fa-angle-right"
+													<li><a href="#"><i class="fa fa-angle-right"
 																aria-hidden="true"></i>Instant Food</a></li>
-													<li><a href="kitchen.html"><i class="fa fa-angle-right"
+													<li><a href="#"><i class="fa fa-angle-right"
 																aria-hidden="true"></i>Dry Fruit</a></li>
-													<li><a href="kitchen.html"><i class="fa fa-angle-right"
+													<li><a href="#"><i class="fa fa-angle-right"
 																aria-hidden="true"></i>Tea &amp; Coffee</a></li>
 	   
 												</ul>
 											</div>
 											<div class="col-sm-3 w3l">
-												<a href="kitchen.html"><img src="images/me.png" class="img-responsive"
+												<a href="#"><img src="images/me.png" class="img-responsive"
 														alt=""></a>
 											</div>
 											<div class="clearfix"></div>
@@ -401,44 +318,41 @@
         <div class="container">
             <div class="col-md-3 footer-grid">
                 <h3>About Us</h3>
-                <p>Nam libero tempore, cum soluta nobis est eligendi
-                    optio cumque nihil impedit quo minus id quod maxime
-                    placeat facere possimus.</p>
+                <p>mnrSewa makes your work easy through mnrsewa and provides all in one online service platform</p>
             </div>
             <div class="col-md-3 footer-grid ">
                 <h3>Menu</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="kitchen.html">Kitchen</a></li>
-                    <li><a href="care.html">Personal Care</a></li>
-                    <li><a href="hold.html">Household</a></li>
-                    <li><a href="codes.html">Short Codes</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">IT services</a></li>
+                    <li><a href="#">Health Care</a></li>
+                    <li><a href="#">Household Services</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </div>
             <div class="col-md-3 footer-grid ">
                 <h3>Customer Services</h3>
                 <ul>
-                    <li><a href="shipping.html">Shipping</a></li>
-                    <li><a href="terms.html">Terms & Conditions</a></li>
-                    <li><a href="faqs.html">Faqs</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="offer.html">Online Shopping</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Faqs</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Online Booking</a></li>
 
                 </ul>
             </div>
             <div class="col-md-3 footer-grid">
                 <h3>My Account</h3>
                 <ul>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="register.html">Register</a></li>
-                    <li><a href="wishlist.html">Wishlist</a></li>
+                    <li><a href="{{route('login')}}">Login</a></li>
+                    <li><a href="{{route('customer.register')}}">Register</a></li>
+                    <li><a href="#">Wishlist</a></li>
 
                 </ul>
             </div>
             <div class="clearfix"></div>
             <div class="footer-bottom">
-                <h2><a href="index.html"><b>M<br>N<br>R</b>Sewa<span>All in One Service Platform</span></a></h2>
+                <h2><a href="{{route('frontend.home')}}"><b>M<br>N<br>R</b>Sewa<span>All in One Service Platform</span></a></h2>
                 <p class="fo-para">Make your work easy by all in one online service platform</p>
                 <ul class="social-fo">
                     <li><a href="https://www.facebook.com/nirajpal.com.np/" class=" face"><i
