@@ -27,7 +27,7 @@ class FrontendController extends Controller
     public function home(){
         $servicecategories = ServiceCategory::where('is_featured', 'on')->where('status', 'active')->pluck('name');
         // dd($servicecategories);
-        $services = Service::all();
+        $services = Service::with('user')->get();
         return view('frontend.pages.home')->with([
         'servicecategories' => $servicecategories,
         'services' => $services,
