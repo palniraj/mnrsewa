@@ -1,4 +1,7 @@
  <!-- mnrsewa -->
+ @php
+      $servicecategories = \App\Models\ServiceCategory::where('is_featured', 'on')->where('status', 'active')->pluck('name');
+ @endphp
  <!DOCTYPE html>
  <html>
 
@@ -20,15 +23,17 @@
          }
      </script>
      <!-- //for-mobile-apps -->
-     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+     <link href="{{asset('css/bootstrap.css')}}" rel='stylesheet' type='text/css' />
      <!-- Custom Theme files -->
-     <link href="css/style.css" rel='stylesheet' type='text/css' />
+     <link href="{{asset('css/style.css')}}" rel='stylesheet' type='text/css' />
+     {{-- fontawesome --}}
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
      <!-- js -->
-     <script src="js/jquery-1.11.1.min.js"></script>
+     <script src="{{asset('js/jquery-1.11.1.min.js')}}"></script>
      <!-- //js -->
      <!-- start-smoth-scrolling -->
-     <script type="text/javascript" src="js/move-top.js"></script>
-     <script type="text/javascript" src="js/easing.js"></script>
+     <script type="text/javascript" src="{{asset('js/move-top.js')}}"></script>
+     <script type="text/javascript" src="{{asset('js/easing.js')}}"></script>
      <script type="text/javascript">
          jQuery(document).ready(function($) {
              $(".scroll").click(function(event) {
@@ -40,12 +45,12 @@
          });
      </script>
      <!-- start-smoth-scrolling -->
-     <link href="css/font-awesome.css" rel="stylesheet">
+     <link href="{{asset('css/font-awesome.css')}}" rel="stylesheet">
      <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
      <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
      <!--- start-rate---->
-     <script src="js/jstarbox.js"></script>
-     <link rel="stylesheet" href="css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+     <script src="{{asset('js/jstarbox.js')}}"></script>
+     <link rel="stylesheet" href="{{asset('css/jstarbox.css')}}" type="text/css" media="screen" charset="utf-8" />
      <script type="text/javascript">
          jQuery(function() {
              jQuery('.starbox').each(function() {
@@ -367,10 +372,18 @@
                      </ul>
                  </div>
              </nav>
+             
              <div class="cart">
+                <a class="nav-link m-0 p-0" href="{{ route('cart.view') }}">
+                    <i class="fas fa-cart-plus text-danger"></i>
+                    Cart
+                    <span class="badge badge-success">{{ \App\Models\Cart::totalItems() }}</span>
+                </a>
+             </div>
+             {{-- <div class="cart">
                  <span class="fa fa-shopping-cart my-cart-icon"><span
                          class="badge badge-notify my-cart-badge"></span></span>
-             </div>
+             </div> --}}
              <div class="clearfix"></div>
          </div>
          </div>
@@ -483,9 +496,9 @@
     <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
     <!-- //smooth scrolling -->
     <!-- for bootstrap working -->
-    <script src="js/bootstrap.js"></script>
+    <script src="{{asset('js/bootstrap.js')}}"></script>
     <!-- //for bootstrap working -->
-    <script type='text/javascript' src="js/jquery.mycart.js"></script>
+    <script type='text/javascript' src="{{asset('js/jquery.mycart.js')}}"></script>
     <script type="text/javascript">
         $(function() {
 

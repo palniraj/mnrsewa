@@ -76,6 +76,15 @@
                              </p>
                          </a>
                      </li>
+                     <li class="nav-item has-treeview menu-open">
+                         <a href="{{ route('orders.index') }}"
+                             class="nav-link {{ Route::is('orders.*') ? ' active' : '' }}">
+                             <i class="nav-icon fas fa-product-hunt"></i>
+                             <p>
+                                 Order
+                             </p>
+                         </a>
+                     </li>
                  @endif
 
                  @if (Auth::user()->role_id == 2)
@@ -88,6 +97,15 @@
                              </p>
                          </a>
                      </li>
+                     <li class="nav-item has-treeview menu-open">
+                        <a href="{{ route('orders.index') }}"
+                            class="nav-link {{ Route::is('orders.*') ? ' active' : '' }}">
+                            <i class="nav-icon fas fa-product-hunt"></i>
+                            <p>
+                                Order
+                            </p>
+                        </a>
+                    </li>
                  @endif
              </ul>
              </li>

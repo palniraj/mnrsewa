@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -30,7 +31,18 @@ Route::get('/customer-register', [FrontendController::class, 'custregister'])->n
 
 Route::get('/home', [FrontendController::class, 'home'])->name('frontend.home');
 
+Route::get('add-to-cart/{service}', [ServiceController::class, 'addToCart'])->name('cart');
+Route::get('remove-cart-item/{service}', [ServiceController::class, 'reduceQuantity'])->name('cart.reduce');
+Route::get('view-cart', [ServiceController::class, 'viewCart'])->name('cart.view');
+Route::get('delete-cart/{serviceId}', [ServiceController::class, 'deleteCart'])->name('cart.delete');
 
+
+Route::get('cart/checkout', [ServiceController::class, 'checkout'])->name('cart.checkout');
+Route::get('thank-you', [OrderController::class, 'thankyou'])->name('thankyou');
+
+Route::resource('orders', OrderController::class)->middleware('auth');
+
+// Route::view('frontend.pages.order-completed', 'order-completed');
 
 Auth::routes(['register' => true]);
 Route::group(['prefix' => 'web-panel', 'middleware' => 'auth'], function () {

@@ -616,10 +616,11 @@
                                      <div class="clearfix"></div>
                                  </div>
                                  <div class="add add-2">
-                                     <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1"
+									<a href="{{route('cart', $service->id)}}" class="btn btn-danger my-cart-btn my-cart-b">Book Now</a>
+                                     {{-- <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1"
                                          data-name="product 1" data-summary="summary 1"
                                          data-price="{{ $service->price }}" data-quantity="1"
-                                         data-image="images/of16.png">Book Now</button>
+                                         data-image="images/of16.png">Book Now</button> --}}
                                  </div>
                              </div>
                          </div>

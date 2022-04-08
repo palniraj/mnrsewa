@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Storage;
 
 class ServiceController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -120,4 +124,108 @@ class ServiceController extends Controller
         return redirect(route('service.index'))->with('success', 'Service Deleted Successfully');
 
     }
+
+
+    public function addToCart($serviceId)
+    {
+        $service = Service::find($serviceId);
+
+        $allCartItems = [];
+
+        $newItemToAdd =  [
+                    'name' => $service->name,
+                    'price' => $service->price,
+                    'qty' => '1'
+        ];
+
+        if(session()->has('cartItems')) {
+            $allCartItems = session()->get('cartItems');
+        }
+
+        //service already in cart
+        if (isset($allCartItems[$serviceId])) {
+            $allCartItems[$serviceId]['qty'] = $allCartItems[$serviceId]['qty'] + 1 ;
+            $allCartItems[$serviceId]['price'] = $service->price * $allCartItems[$serviceId]['qty'];
+        }else {
+            $allCartItems[$serviceId] =  $newItemToAdd;
+        }
+
+        session()->put('cartItems', $allCartItems);
+
+        return back()->withMessage("Item has been added to cart");
+
+    }
+
+    public function reduceQuantity($serviceId)
+    {
+        $service = service::find($serviceId);
+
+        $allCartItems = [];
+
+        if (session()->has('cartItems')) {
+            $allCartItems = session()->get('cartItems');
+        }
+
+        //service already in cart
+        if (empty($allCartItems[$serviceId])) {
+            return back()->withMessage('No item to remove');
+        }
+
+        $qty = $allCartItems[$serviceId]['qty'];
+
+        if($qty > 1) {
+            $allCartItems[$serviceId]['qty']--;
+            $allCartItems[$serviceId]['price'] = $service->price * $allCartItems[$serviceId]['qty'];
+        }
+
+        session()->put('cartItems', $allCartItems);
+
+        return back()->withMessage("Item has been removed from cart");
+
+    }
+
+    public function viewCart()
+    {
+        // session()->remove('cartItems');
+        $allItems = session('cartItems') ?? [];
+
+        // if(isset(session('cartItems'))) {
+        //     $allItems  = session('cartItems')
+        // }else {
+        //     $allItems = [];
+        // }
+
+        return view('frontend.pages.cart', compact('allItems'));
+    }
+
+    public function deleteCart($serviceId)
+    {
+        $existingCartItems = session('cartItems');
+
+        if(isset($existingCartItems[$serviceId])) {
+
+            //delete that
+            unset($existingCartItems[$serviceId]);
+
+            session()->put('cartItems', $existingCartItems);
+        }
+
+        return back();
+    }
+
+    // public function updateCart($serviceId)
+    // {
+
+    // }
+
+    public function checkout()
+    {
+        $cartItems = session('cartItems');
+
+        // $address = auth()->user()->address;
+
+
+        return view('frontend.pages.checkout', compact('cartItems'));
+    }
+
 }

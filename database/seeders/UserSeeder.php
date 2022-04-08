@@ -74,7 +74,7 @@ class UserSeeder extends Seeder
                 ],
                 [
                     'id' => 7,
-                    'name' => 'Bikram Basnet',
+                    'name' => 'Lalit Nath',
                     'email' => 'freelancer3@mnrsewa.com',
                     'password' => bcrypt('freelancer#1234'),
                     'phone' => 9848759464,
