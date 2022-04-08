@@ -6,7 +6,9 @@
              class="brand-image img-circle elevation-3" style="opacity: .8">
          <span class="brand-text font-weight-light text-dark">mnrSewa Admin </span>
      </a>
-
+@php
+    $pendingCount = App\Models\Order::where('status', 'pending')->count();
+@endphp
      <!-- Sidebar -->
      <div class="sidebar">
          <!-- Sidebar user panel (optional) -->
@@ -81,7 +83,7 @@
                              class="nav-link {{ Route::is('orders.*') ? ' active' : '' }}">
                              <i class="nav-icon fas fa-product-hunt"></i>
                              <p>
-                                 Order
+                                 Order <span class="badge badge-danger right">{{$pendingCount}}</span>
                              </p>
                          </a>
                      </li>
@@ -102,7 +104,7 @@
                             class="nav-link {{ Route::is('orders.*') ? ' active' : '' }}">
                             <i class="nav-icon fas fa-product-hunt"></i>
                             <p>
-                                Order
+                                Order <span class="badge badge-danger right">{{$pendingCount}}</span>
                             </p>
                         </a>
                     </li>
