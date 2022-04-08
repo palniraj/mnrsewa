@@ -25,12 +25,11 @@ use App\Http\Controllers\ServiceCategoryController;
 
 
 
-Route::get('/', [FrontendController::class, 'index'])->name('mnrsewa.index');
 Route::get('/company-register', [FrontendController::class, 'compregister'])->name('company.register');
 Route::get('/freelancer-register', [FrontendController::class, 'freelregister'])->name('freelancer.register');
 Route::get('/customer-register', [FrontendController::class, 'custregister'])->name('customer.register');
 
-Route::get('/home', [FrontendController::class, 'home'])->name('frontend.home');
+Route::get('/', [FrontendController::class, 'home'])->name('frontend.home');
 
 Route::get('add-to-cart/{service}', [ServiceController::class, 'addToCart'])->name('cart');
 Route::get('remove-cart-item/{service}', [ServiceController::class, 'reduceQuantity'])->name('cart.reduce');

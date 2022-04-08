@@ -17,12 +17,12 @@
 <link rel="stylesheet" href="{{url('dashboard')}}/plugins/summernote/summernote-bs4.css">
 @endsection
 @include('admin.includes.header')
-@if(Auth::user()->role == 'admin')
+@if(Auth::user()->role_id == 1)
 @php
-$userCount = App\Models\User::where('role', 'user')->count();
-$pendingCount = App\Models\User::where('status', 'pending')->count();
-$approvedCount = App\Models\User::where('status', 'approved')->count();
-$rejectedCount = App\Models\User::where('status', 'rejected')->count();
+$userCount = \App\Models\User::where('role_id', 2)->count();
+$pendingCount = \App\Models\User::where('status', 'pending')->count();
+$approvedCount = \App\Models\User::where('status', 'approved')->count();
+$rejectedCount = \App\Models\User::where('status', 'rejected')->count();
 @endphp
 @endif
 
@@ -38,7 +38,7 @@ $rejectedCount = App\Models\User::where('status', 'rejected')->count();
           <div class="inner">
             <h3>{{$userCount}}</h3>
 
-            <p>{{trans('general.employee')}}</p>
+            <p>Customer</p>
           </div>
           <div class="icon">
             <i class="ion ion-person-add"></i>
@@ -59,7 +59,7 @@ $rejectedCount = App\Models\User::where('status', 'rejected')->count();
           <div class="icon">
             <i class="ion ion-pinpoint"></i>
           </div>
-          <a href="{{route('applicant.pending')}}" class="small-box-footer"> {{trans('general.more-info')}} <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="{{route('user.index')}}" class="small-box-footer"> {{trans('general.more-info')}} <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -74,7 +74,7 @@ $rejectedCount = App\Models\User::where('status', 'rejected')->count();
           <div class="icon">
             <i class="ion ion-stats-bars"></i>
           </div>
-          <a href="{{route('applicant.approved')}}" class="small-box-footer"> {{trans('general.more-info')}} <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="{{route('user.index')}}" class="small-box-footer"> {{trans('general.more-info')}} <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -90,78 +90,13 @@ $rejectedCount = App\Models\User::where('status', 'rejected')->count();
           <div class="icon">
             <i class="ion ion-close"></i>
           </div>
-          <a href="{{route('applicant.rejected')}}" class="small-box-footer"> {{trans('general.more-info')}} <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="{{route('user.index')}}" class="small-box-footer"> {{trans('general.more-info')}} <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
 
   
-      <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-warning">
-          <div class="inner">
-            <h3>2</h3>
-
-            <p>{{trans('general.total')}} {{trans('general.vendor')}}</p>
-          </div>
-          <div class="icon">
-            <i class="ion ion-laptop"></i>
-          </div>
-          <a href="#" class="small-box-footer">{{trans('general.more-info')}} <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-      </div>
-
-   <!-- ./col -->
-   <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-info">
-          <div class="inner">
-            <h3>3</h3>
-
-            <p>{{trans('general.pending')}} {{trans('general.vendor')}}</p>
-          </div>
-          <div class="icon">
-            <i class="ion ion-pinpoint"></i>
-          </div>
-          <a href="#" class="small-box-footer">{{trans('general.more-info')}} <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-      </div>
-      <!-- ./col -->
-      <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-success">
-          <div class="inner">
-            <h3>2</h3>
-
-            <p>{{trans('general.approved')}} {{trans('general.vendor')}}</p>
-          </div>
-          <div class="icon">
-            <i class="ion ion-stats-bars"></i>
-          </div>
-          <a href="" class="small-box-footer">{{trans('general.more-info')}} <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-      </div>
-      <!-- ./col -->
-
-      <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-danger">
-          <div class="inner">
-            <h3>2</h3>
-
-            <p>{{trans('general.rejected')}} {{trans('general.vendor')}}</p>
-          </div>
-          <div class="icon">
-            <i class="ion ion-close"></i>
-          </div>
-          <a href="" class="small-box-footer">{{trans('general.more-info')}} <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-      </div>
-
       @endif
-
-      <!-- ./col -->
-    </div>
-
+  
    
   </div><!-- /.container-fluid -->
 </section>
