@@ -248,7 +248,7 @@
                  @foreach ($services as $service)
                      <div class="col-md-4 pro-1">
                          <div class="col-m">
-                             <a href="#" data-toggle="modal" data-target="#myModal17" class="offer-img">
+                             <a href="#" data-toggle="modal" data-target="#myModal{{$service->id}}" class="offer-img">
                                  <img src="{{ asset('uploads/service/' . $service->image) }}" class="img-responsive"
                                      alt="">
                              </a>
@@ -385,6 +385,42 @@
                          <p class="quick_desc"> {!! $householdservice->description !!}</p>
                          <div class="add-to">
 							<a href="{{route('cart', $householdservice->id)}}" class="btn btn-danger my-cart-btn my-cart-b">Book Now</a>
+                         </div>
+                     </div>
+                     <div class="clearfix"> </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+	 @endforeach
+
+     <!-- service -->
+	 @foreach ($services as $service)		 
+     <div class="modal fade" id="myModal{{$service->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+         <div class="modal-dialog" role="document">
+             <div class="modal-content modal-info">
+                 <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                             aria-hidden="true">&times;</span></button>
+                 </div>
+                 <div class="modal-body modal-spa">
+                     <div class="col-md-5 span-2">
+                         <div class="item">
+                             <img src="{{asset('uploads/service/'.$service->image)}}" class="img-responsive" alt="">
+                         </div>
+                     </div>
+                     <div class="col-md-7 span-1 ">
+                         <h3>{{$service->name}}</h3>
+                       <strong>  <p class="in-para"> {{$service->user->name}}</p></strong>
+                         <div class="price_single">
+                             <span class="reducedfrom ">Rs.{{$service->price}}</span>
+
+                             <div class="clearfix"></div>
+                         </div>
+                         <h4 class="quick">Quick Overview:</h4>
+                         <p class="quick_desc"> {!! $service->description !!}</p>
+                         <div class="add-to">
+							<a href="{{route('cart', $service->id)}}" class="btn btn-danger my-cart-btn my-cart-b">Book Now</a>
                          </div>
                      </div>
                      <div class="clearfix"> </div>
