@@ -11,7 +11,7 @@
                     @csrf
                     <div class="key">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <input  type="email"  class="@error('email') is-invalid @enderror" name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required autocomplete="email" required="">
+                        <input  type="text"  class="@error('email') is-invalid @enderror" name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required autocomplete="email" required="">
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
