@@ -37,7 +37,7 @@
 
             <div class="form-group">
                 <label for="">Full Address</label>
-                <input type="text" name="shipping_address" id="" class="form-control">
+                <input type="text" name="shipping_address" id="" onclick="getLocation()" class="form-control">
             </div>
 
             <div class="form-group">
@@ -47,11 +47,11 @@
 
             <div class="form-group">
                 <label for="">Latitude</label>
-                <input type="text" name="latitude" id="" class="form-control">
+                <input type="text" name="latitude" id="latitude" class="form-control">
             </div>
             <div class="form-group">
                 <label for="">Longitude</label>
-                <input type="text" name="longitude" id="" class="form-control">
+                <input type="text" name="longitude" id="longitude" class="form-control">
             </div>
 
             <strong>
@@ -81,4 +81,36 @@
 
 
     </div>
+
+<script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(showPosition, showError);
+        } else {
+            la.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        document.getElementById("latitude").value = position.coords.latitude;
+        document.getElementById("longitude").value = position.coords.longitude;
+       }
+
+    function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                la.innerHTML = "User denied the request for Geolocation."
+                break;
+            case error.POSITION_UNAVAILABLE:
+                la.innerHTML = "Location information is unavailable."
+                break;
+            case error.TIMEOUT:
+                la.innerHTML = "The request to get user location timed out."
+                break;
+            case error.UNKNOWN_ERROR:
+                la.innerHTML = "An unknown error occurred."
+                break;
+        }
+    }
+</script>
 @endsection

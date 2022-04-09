@@ -119,7 +119,7 @@ if (isset($profile)) {
                                     value="{{ $phone }}">
                                 <label for="address" class="col-sm-3">Address: <span
                                         class="text-danger">*</span></label>
-                                <input type="number" class="form-control col-sm-3" id="address" name="address"
+                                <input type="number" class="form-control col-sm-3" id="address" onclick="getLocation()" name="address"
                                     value="{{ $address }}">
                             </div>
                             <div class="form-group row">
@@ -188,5 +188,37 @@ if (isset($profile)) {
             $('.textarea').summernote()
         })
     </script>
+
+<script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(showPosition, showError);
+        } else {
+            la.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        document.getElementById("latitude").value = position.coords.latitude;
+        document.getElementById("longitude").value = position.coords.longitude;
+       }
+
+    function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                la.innerHTML = "User denied the request for Geolocation."
+                break;
+            case error.POSITION_UNAVAILABLE:
+                la.innerHTML = "Location information is unavailable."
+                break;
+            case error.TIMEOUT:
+                la.innerHTML = "The request to get user location timed out."
+                break;
+            case error.UNKNOWN_ERROR:
+                la.innerHTML = "An unknown error occurred."
+                break;
+        }
+    }
+</script>
 @endsection
 @endsection
