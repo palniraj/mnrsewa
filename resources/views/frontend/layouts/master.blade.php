@@ -10,7 +10,7 @@
      <!-- for-mobile-apps -->
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-     <meta property="og:title" content="Video" />
+     <meta property="og:title" content="mnrSewa" />
      <meta name="keywords"
          content="mnrSewa, Make your work easy by all in one online service platform, all in one service," />
      <script type="application/x-javascript">
@@ -90,13 +90,37 @@
              <div class="head-t">
                  <ul class="card">
                      <li><a href="wishlist.html"><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
+                     @guest
+                     @if (Route::has('login'))
                      <li><a href="{{ route('login') }}"><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
+                     @endif
+                     @if (Route::has('register'))   
                      <li><a href="{{ route('company.register') }}"><i class="fa fa-arrow-right"
                                  aria-hidden="true"></i>Join as Company</a></li>
                      <li><a href="{{ route('freelancer.register') }}"><i class="fa fa-arrow-right"
                                  aria-hidden="true"></i>Join as Freelancer</a></li>
                      <li><a href="{{ route('customer.register') }}"><i class="fa fa-arrow-right"
                                  aria-hidden="true"></i>Register as Customer</a></li>
+                     @endif
+                     @else
+                     <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{route('profile.index')}}" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <i class="fa fa-user" aria-hidden="true"></i>  {{ Auth::user()->name }}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                    @endguest
+
                      <li><a href="tel:+977-9810631146"><i class="fa fa-phone" aria-hidden="true"></i>9810631146</a>
                      </li>
                      <li><a href="tel:+977-9868715191"><i class="fa fa-phone" aria-hidden="true"></i>9868715191</a>

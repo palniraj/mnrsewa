@@ -9,7 +9,7 @@
                  <div class="search-form">
                      <form action="{{route('service.search')}}" method="GET">
                          <input type="text" placeholder="Find your perfect service today..." name="query">
-                         <input type="submit" value=" ">
+                         <input type="submit" value="">
                      </form>
                  </div>
              </div>

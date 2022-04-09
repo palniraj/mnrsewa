@@ -38,7 +38,7 @@
           <a href="{{route('webpanel.contact')}}" class="nav-link">{{trans('general.contact')}}</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="{{route('frontend.home')}}" class="nav-link">Website</a>
+          <a href="{{route('frontend.home')}}" class="nav-link bg-primary">Website</a>
         </li>
       </ul>
 
