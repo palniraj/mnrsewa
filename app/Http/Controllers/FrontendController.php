@@ -43,5 +43,9 @@ class FrontendController extends Controller
         'householdservices' => $householdservices,
         ]);
     }
+
+    public function vendor(){
+        
+    }
   
 }

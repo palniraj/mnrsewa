@@ -7,17 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Interestfield extends Model
 {
-    protected $fillable = ['user_id', 'servicecategory_id'];
+    protected $fillable = ['user_id', 'servicecategory'];
 
-   
-    public function setCategoryAttribute($value)
+    public function servicecategorys()
     {
-        $this->attributes['servicecategory_id'] = json_encode($value);
+        return $this->belongsToMany(ServiceCategory::class)->withPivot('servicecategory');
     }
 
-    public function getCategoryAttribute($value)
-    {
-        return $this->attributes['servicecategory_id'] = json_decode($value);
-    }
+    // public function hasServiceategory($servicecategoryId)
+    // {
+    //     return in_array($servicecategoryId, $this->servicecategory()->pluck('id')->toArray());
+    // }
     use HasFactory;
 }

@@ -43,8 +43,16 @@ class InterestfieldController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-        $input['servicecategory_id'] = $request->input('servicecategory_id');
+       
+        $arrayTostring = implode(',', $request->input('servicecategory'));
+        echo $arrayTostring;
+        exit();
+        // Interestfield::create($input);
+        // @foreach($servicecategory as $servicecategory)
+        // @endforeach
+        // $interestfield->servicecategory()->sync($request->input('servicecategory_id', []));
+        // $input['servicecategory_id'] = $request->input('servicecategory_id');
+
         // dd($input);
         return redirect(route('interestfield.index'))->with('success', 'Interestfield Added Successfully');
     }

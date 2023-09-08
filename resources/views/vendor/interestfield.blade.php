@@ -66,7 +66,7 @@ if (isset($interestfield)) {
                             <div class="form-group row">
                                 @foreach ($servicecategory as $category)
                                     <div class="form-check col-3 m-2">
-                                        <label class="form-check-label"><input class="form-check-input" name="servicecategory_id[]" type="checkbox" value="{{ $category->id }}">
+                                        <label class="form-check-label"><input class="form-check-input" name="servicecategory_id" type="checkbox" value="{{ $category->id }}">
                                         {{ $category->name }}</label>
                                         </div>
                                 @endforeach

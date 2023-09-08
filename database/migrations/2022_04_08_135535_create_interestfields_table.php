@@ -16,7 +16,7 @@ class CreateInterestfieldsTable extends Migration
         Schema::create('interestfields', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->unsignedBigInteger('servicecategory_id')->nullable();
+            $table->string('servicecategory')->nullable();
            
             $table->timestamps();
         });
