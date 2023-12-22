@@ -401,7 +401,7 @@
                     </div>
                     <div class="col-md-4 fo-grid1">
                         <p><a href="mailto:contact@nirajpal.com.np"><i class="fa fa-envelope-o"
-                                    aria-hidden="true"></i>contact@nirajpal.com.np</a></p>
+                                    aria-hidden="true"></i>hi@nirajpal.com.np</a></p>
                     </div>
                     <div class="clearfix"></div>
 
