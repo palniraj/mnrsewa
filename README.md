@@ -1,66 +1,209 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<a href="https://mnrsewa.nirajpal.com.np/">
+<img src="public/images/mnrSewa_dlogo.png"  alt="logo" height="100px" width="200"/>
+</a>
+
+<h3 align="center">Make your work easy by all in one online service platform</h3>
 </p>
 
-## About Laravel
+<p align="center">
+<img src="https://img.shields.io/github/workflow/status/palniraj/mnrsewa/build" alt="github actions" />
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<a href="https://github.com/palniraj/mnrsewa/blob/main/LICENSE" target="_blank">
+<img alt="License: MIT" src="https://img.shields.io/github/license/palniraj/mnrsewa" />
+</a>
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p align="center">
+<a href="https://mnrsewa.nirajpal.com.np/">View Demo</a>
+·
+<a href="https://github.com/palniraj/mnrsewa/issues">Report Bug</a>
+·
+<a href="https://github.com/palniraj/mnrsewa/issues">Request Feature</a>
+</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<p align="center">
+MnrSewa is a user-friendly web application designed to connect people with the services they need. It combines a recommendation system with an e-commerce platform to make finding and offering services easier and more efficient.
+</p>
 
-## Learning Laravel
+> ⚠️ This is pre-released (experimental) version of [mnrSewa website](https://mnrsewa.nirajpal.com.np/). That means we are still working to improve the site and breaking changes may occur anytime. So please avoid providing your real profile details as the app isn't fully secure and data may get erased any time. Meanwhile, you can help us by [raising an issue](https://github.com/palniraj/mnrsewa/issues/new/choose) if you find any bugs in the project.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Key Features:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Personalized Recommendations**:
+Choose your interests, like IT services or plumbing, and get tailored suggestions for service providers in those areas.
 
-## Laravel Sponsors
+- **E-commerce Platform**:
+MnrSewa hosts a variety of vendors, letting you find and compare different service providers all in one place.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- **Opportunities for Service Providers**:
+Freelancers and companies can use MnrSewa to reach new customers and grow their business.
 
-### Premium Partners
+- **Multi-language Support**:
+Available in multiple languages, including Nepali, to make it accessible for everyone.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+- **Location-Based Suggestions**:
+The app finds your location and recommends the best nearby service providers for quick and timely help.
+
+- **Fair Pricing**:
+Service charges are based on the distance between you and the service provider, ensuring fair rates.
+
+- **Smart Recommendations**:
+The app learns from user patterns to improve service suggestions over time.
+
+- **User Reviews**:
+Leave reviews for service providers to help others choose the best options.
+
+- **Benefits for Everyone**:
+MnrSewa benefits freelancers, companies, and customers by creating a connected and efficient service ecosystem.
+
+## Website Flow
+#### for freelancer or company
+- Register and login
+- Profile Update
+- Add and update Services
+- View Order and complete
+
+#### for customer
+- Register and login
+- Profile Update
+- Search Service
+- Cart Service
+- Order Service
+- View Order Status
+- Review
+
+#### for admin
+- Login
+- Statistics Dashboard
+- Add Service Category
+- User Management(Approve, Reject - Portfolio Profiles)
+
+
+## Tech Stack
+
+- **Frontend** : HTML, CSS, Bootstrap, JavaScript, Jquery
+- **Backend** : PHP, Laravel, AJAX
+- **Database** : Mysql
+- **Deployment** : AWS ec2 or Server, Client & Postgress Database hosted on Heroku
+- **Tech modules** : Authentication, Authorization, Role Based Dashboard Pannel(Admin, Customer, Freelancer, Company), Service Recommendation, Create Protfolio and add Services, Book and Order, Search, Cart Services, etc.
+
+## Local Development
+
+Before running app locally make sure that you've install flowiing things in your machine:
+
+- PHP version >= _v7.1_
+- Composer version >= v2.4_
+- Mysql
+- Laravel >= v7
+- Download and install [XAMPP](https://www.apachefriends.org/download.html) as database toolkit for easy database setup. (Optional)
+
+#### Step 1: Clone the repo
+
+```sh
+https://github.com/palniraj/mnrsewa.git
+```
+
+#### Step 2 : Install dependencies
+
+cd into the directory
+
+```sh
+ cd mnrsewa
+```
+
+In the root folder do:
+
+```sh
+  # Install the composer, laravel project dependencies
+  
+  composer install
+```
+
+#### Step 3 : Configuration
+
+1.  Create `.env` file in the root directory.
+
+```sh
+  touch .env
+```
+
+2. Open [.env.example](./.env.example) file, copy everything
+
+3. Paste the content in `.env` file
+
+4. Create database named `mnrsewa` with [phpmyadmin] or `mysql-cli` from your terminal. _(You don't have to create tables for database)_
+
+```sh
+  sudo mysql
+```
+```sql
+  CREATE database mnrsewa;
+```
+
+5. Again open `.env` file and replace fields like `DB_DATABASE`, `DB_USERNAME` , `DB_PASSWORD` with your own credentials and save.
+
+
+6. Set application key 
+
+```sh
+  php artisan key:generate
+```
+7. And Migrate with
+
+```sh
+  php artisan migrate --seed
+```
+Or
+```sh
+  php artisan migrate:fresh --seed
+```
+8. Storage Link
+```sh
+  php artisan storage:link
+```
+
+_The configuration is quite hard tbh, if you encounter any problems in setup you can directy create [issue](github.com/palniraj/mnrsewa/issues). We will try to work on that._
+
+#### Step 4: Usage
+
+Now, you can run application by
+
+```sh
+php artisan serve
+
+# website runs on http://localhost:8000 
+
+```
+
+#### Login Credentials for admin panel
+```sh
+ email: admin@mnrsewa.com  
+ password : admin#1234
+ ```
+ ```sh
+ email: customer@mnrsewa.com  
+ password : customer#1234
+  ```
+ ```sh
+ email: freelancer1@mnrsewa.com  
+ password : freelancer#1234
+  ```
+ ```sh
+ email: info@sofsee.com        
+ password: company#1234
+  ```
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Contributions, issues and feature requests are welcome. After cloning & setting up project locally, you can just submit a PR to this repo and it will be deployed once it's accepted.
+Read [CONTRIBUTING.md](https://github.com/palniraj/mnrsewa/blob/main/CONTRIBUTING.md) for complete contributing guidelines.
 
-## Code of Conduct
+## Contributors
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- WIP
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Copyright © 2021 [Niraj Pal](https://nirajpal.com.np).
+This project is MIT licensed.
